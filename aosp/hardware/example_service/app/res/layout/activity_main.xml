@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"> <!-- Center content horizontally -->
+
+    <!-- EditText for user input -->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text here"
+        android:textSize="18sp"
+        android:layout_marginBottom="24dp"
+        android:inputType="text"/>
+
+    <!-- Container for buttons with equal width -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Register listener -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register listener"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Unregister listener -->
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:text="Unregister listener"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Read device file -->
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"
+            android:text="Read device file"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Button 4 -->
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Write device file" />
+    </LinearLayout>
+
+</LinearLayout>

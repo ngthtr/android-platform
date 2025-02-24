@@ -1,0 +1,18 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+android_app {
+    name: "ExampleApp",
+    srcs: [ "src/com/**/*.java"],
+    resource_dirs: ["res"],
+    manifest: "AndroidManifest.xml",
+    certificate: "platform",
+    platform_apis: true,
+    static_libs: [
+        "androidx.lifecycle_lifecycle-extensions",
+        "androidx.appcompat_appcompat",
+        "com.google.android.material_material",
+        "com.example.api.aidl-V1-java",
+    ],
+}
