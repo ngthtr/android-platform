@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compatibility-matrix version="1.0" type="framework">
+    <hal format="aidl" optional="true">
+        <name>com.example.api.aidl</name>
+        <interface>
+            <name>IExampleService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
