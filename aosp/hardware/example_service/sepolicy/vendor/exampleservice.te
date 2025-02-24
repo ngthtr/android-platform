@@ -1,0 +1,22 @@
+type exampleservice, domain;
+type exampleservice_exec, exec_type, vendor_file_type, file_type;
+
+# Set up the init daemon domain
+init_daemon_domain(exampleservice)
+
+# Permission to ProcessState
+allow exampleservice vndbinder_device:chr_file { read open write ioctl map };
+
+# Permission to read/write device file
+allow exampleservice example_driver_device:chr_file { getattr open read ioctl lock append write map };
+
+# Permission to call defaultServiceManager
+allow exampleservice servicemanager:binder { call transfer };
+
+# Permission to allow native service register AIDL service
+allow exampleservice exampleaidl:service_manager { add };
+
+# Permission to allow service call to application
+allow exampleservice platform_app:binder { call };
+
+

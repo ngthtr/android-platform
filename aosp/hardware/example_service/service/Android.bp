@@ -1,0 +1,22 @@
+cc_binary {
+    name: "com.service.exampleservice",
+    vendor: true,
+    srcs: ["com/**/*.cpp"],
+    local_include_dirs: ["com/**/*.hpp"],
+    init_rc: ["com.service.exampleservice.rc"],
+    vintf_fragments: ["com.service.exampleservice.xml"],
+    cflags: [
+        "-Wall",
+        "-Werror"
+    ],
+
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libhardware",
+        "libbinder",
+        "libbinder_ndk",
+        "libutils",
+        "com.example.api.aidl-V1-ndk",
+    ],
+}

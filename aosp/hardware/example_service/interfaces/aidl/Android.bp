@@ -1,0 +1,23 @@
+aidl_interface {
+    name: "com.example.api.aidl",
+    stability: "vintf",
+    srcs: ["com/**/*.aidl"],
+    owner: "truongnt",
+    vendor: true,
+    backend: {
+        java: {
+            enabled: true,
+            sdk_version: "module_current",
+        },
+        cpp: {
+            enabled: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+        rust: {
+            enabled: false,
+        }
+    },
+
+}

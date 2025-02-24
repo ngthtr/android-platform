@@ -1,0 +1,6 @@
+# Define application process as domain
+type exampleapp, domain;
+
+# Permission to allow application transfer data or call method to native service
+allow platform_app exampleservice:binder { call transfer };
+

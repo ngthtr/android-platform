@@ -1,0 +1,5 @@
+# Define lable for native service
+/vendor/bin/com.service.exampleservice		    u:object_r:exampleservice_exec:s0
+# Define lable for device driver
+/dev/example_driver                             u:object_r:example_driver_device:s0
+

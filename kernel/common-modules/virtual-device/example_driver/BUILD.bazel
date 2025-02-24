@@ -1,0 +1,27 @@
+load("//build/kernel/kleaf:kernel.bzl", "ddk_module")
+
+filegroup(
+    name = "example_driver_sources",
+    srcs = glob([
+        "src/*.c",
+        "inc/*.h"
+    ]),
+)
+
+ddk_module(
+    name = "example_driver",
+    srcs = [":example_driver_sources"], 
+    out = "example_driver.ko",
+    kernel_build = "//common-modules/virtual-device:virtual_device_x86_64",
+    deps = [
+        "//common:all_headers_x86_64",
+        "//common-modules/virtual-device/test_driver:test_driver"
+    ],
+    visibility = [
+        "//common-modules/virtual-device:__pkg__",
+        "//common-modules/virtual-device/test_driver:__pkg__"
+    ],
+)
+
+
+

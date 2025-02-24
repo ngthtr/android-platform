@@ -1,0 +1,5 @@
+# Define label for AIDL service
+com.example.api.aidl.IExampleService/default         u:object_r:exampleaidl:s0
+
+
+

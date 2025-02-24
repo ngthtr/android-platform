@@ -1,0 +1,10 @@
+service com.service.exampleservice /vendor/bin/com.service.exampleservice
+    interface aidl com.example.api.aidl.IExampleService/default
+    class hal
+    user system
+    group system
+
+on boot
+    # Set permisson, user, group to access to device driver
+    chown system system /dev/example_driver
+    chmod 0666 /dev/example_driver
